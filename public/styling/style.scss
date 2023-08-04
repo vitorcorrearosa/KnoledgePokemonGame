@@ -1,0 +1,231 @@
+// import
+
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+// variables
+$lakeLucerne: #669bbc;
+$ditheredSky: #bde0fe;
+$cosmosBlue: #003049;
+$gochujangRed: #780000;
+$bloodThirstyLips: #c1121f;
+$mikadoYellow: #ffbe0b;
+$dayLily: #fef8ec;
+
+$AnonymousPro: "Anonymous Pro", monospace; //normal
+$MajorMonoDisplay: "Major Mono Display", monospace; //title
+
+$normalFont: 1.6rem;
+
+// mixins
+
+@mixin centerElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centerHorizontally {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin centerVertically {
+  display: flex;
+  align-items: center;
+}
+
+@mixin paddingLR {
+  padding: {
+    left: 3rem;
+    right: 3rem;
+  }
+}
+
+// universal config
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box: {
+    sizing: border-box;
+  }
+
+  font: {
+    size: 62.5%;
+    family: $AnonymousPro;
+  }
+
+  letter: {
+    spacing: 0.05rem;
+  }
+}
+
+// website style config
+
+div#app-container {
+  @include centerElement();
+  position: absolute;
+  width: auto;
+  height: auto;
+
+  form#formLogin {
+    @include centerElement();
+    width: 30rem;
+    height: 25rem;
+
+    background: linear-gradient(
+      to top left,
+      $ditheredSky,
+      $lakeLucerne,
+      $bloodThirstyLips
+    );
+
+    border: {
+      radius: 20%;
+    }
+
+    flex: {
+      direction: column;
+    }
+
+    background: {
+      color: $lakeLucerne;
+    }
+
+    input.loginInput {
+      width: 20rem;
+      height: 2.5rem;
+
+      margin: {
+        bottom: 1rem;
+      }
+    }
+
+    label {
+      color: $dayLily;
+
+      font: {
+        size: $normalFont;
+        weight: bold;
+      }
+
+      margin: {
+        bottom: 1rem;
+      }
+    }
+
+    button.btnConfig {
+      width: 15rem;
+      height: 5rem;
+      color: $dayLily;
+
+      background: {
+        color: $cosmosBlue;
+      }
+
+      border: {
+        radius: 10%;
+      }
+    }
+  }
+}
+
+header {
+  width: 100%;
+  height: 100px;
+
+  nav#navbar {
+    @include paddingLR();
+    a#title {
+      color: $cosmosBlue;
+
+      font: {
+        size: 1.8rem;
+        family: $MajorMonoDisplay;
+        style: italic;
+      }
+
+      letter: {
+        spacing: 0.3rem;
+      }
+
+      span#k {
+        color: $gochujangRed;
+
+        &:hover {
+          ~ #nowledge {
+            display: inline;
+          }
+        }
+      }
+
+      span#p {
+        color: $bloodThirstyLips;
+
+        &:hover {
+          ~ #okemon {
+            display: inline;
+          }
+        }
+      }
+
+      span#g {
+        color: $mikadoYellow;
+
+        &:hover {
+          ~ #ame {
+            display: inline;
+          }
+        }
+      }
+
+      span#nowledge,
+      span#okemon,
+      span#ame {
+        display: none;
+
+        font: {
+          size: $normalFont;
+        }
+      }
+
+      span {
+        font: {
+          size: 2.2rem;
+          family: $MajorMonoDisplay;
+          style: italic;
+        }
+      }
+    }
+
+    button#burgerMenu {
+      span {
+        color: $cosmosBlue;
+
+        font: {
+          size: $normalFont;
+        }
+      }
+    }
+
+    div#navbarNavDropdown {
+      ul {
+        li {
+          a {
+            color: $lakeLucerne;
+
+            font: {
+              size: $normalFont;
+            }
+          }
+        }
+      }
+    }
+  }
+}

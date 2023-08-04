@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Anonymous Pro", monospace;
+  letter-spacing: 0.05rem;
+}
+
+div#app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+div#app-container form#formLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  height: 25rem;
+  background: linear-gradient(to top left, #bde0fe, #669bbc, #c1121f);
+  border-radius: 20%;
+  flex-direction: column;
+  background-color: #669bbc;
+}
+div#app-container form#formLogin input.loginInput {
+  width: 20rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+}
+div#app-container form#formLogin label {
+  color: #fef8ec;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+div#app-container form#formLogin button.btnConfig {
+  width: 15rem;
+  height: 5rem;
+  color: #fef8ec;
+  background-color: #003049;
+  border-radius: 10%;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+}
+header nav#navbar {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+header nav#navbar a#title {
+  color: #003049;
+  font-size: 1.8rem;
+  font-family: "Major Mono Display", monospace;
+  font-style: italic;
+  letter-spacing: 0.3rem;
+}
+header nav#navbar a#title span#k {
+  color: #780000;
+}
+header nav#navbar a#title span#k:hover ~ #nowledge {
+  display: inline;
+}
+header nav#navbar a#title span#p {
+  color: #c1121f;
+}
+header nav#navbar a#title span#p:hover ~ #okemon {
+  display: inline;
+}
+header nav#navbar a#title span#g {
+  color: #ffbe0b;
+}
+header nav#navbar a#title span#g:hover ~ #ame {
+  display: inline;
+}
+header nav#navbar a#title span#nowledge,
+header nav#navbar a#title span#okemon,
+header nav#navbar a#title span#ame {
+  display: none;
+  font-size: 1.6rem;
+}
+header nav#navbar a#title span {
+  font-size: 2.2rem;
+  font-family: "Major Mono Display", monospace;
+  font-style: italic;
+}
+header nav#navbar button#burgerMenu span {
+  color: #003049;
+  font-size: 1.6rem;
+}
+header nav#navbar div#navbarNavDropdown ul li a {
+  color: #669bbc;
+  font-size: 1.6rem;
+}
+
+/*# sourceMappingURL=style.css.map */
